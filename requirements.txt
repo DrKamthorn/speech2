@@ -1,0 +1,2 @@
+openai_whisper==20230314
+streamlit==1.22.0
