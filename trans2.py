@@ -5,6 +5,10 @@ st.title("งานสารบรรณ ศูนย์การแพทย์
 
 audio_file=st.file_uploader("Upload ไฟล์เสียง", type=["wav","mp3","m4a"])
 
+@st.cache
+def load_model():
+    return whisper.load(audio_file.name)
+
 model=whisper.load_model("medium")
 st.text("กำลัง Upload ไฟล์")
 
